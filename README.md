@@ -4,6 +4,16 @@ A fully functional ATM (Automated Teller Machine) simulator built as a modern fu
 
 ---
 
+## 🔑 Demo Login Credentials (Quick Testing)
+
+| Role | Account Number | Password / PIN | Starting Balance | Description |
+| :--- | :---: | :---: | :---: | :--- |
+| **Owner (Admin)** | `0000` | `0000` | *N/A* | Admin panel to register/delete customers, view logs, and reset customer PINs. |
+| **Customer 1** | `1001` | `1234` | `$5,000.00` | Standard customer (Check balance, deposit, withdraw, transfer). |
+| **Customer 2** | `1002` | `5678` | `$3,000.00` | Standard customer (Check balance, deposit, withdraw, transfer). |
+
+---
+
 ## 📁 Repository Structure
 
 ```
@@ -15,6 +25,7 @@ python-atm-transcation/
 │   ├── transactions.py     # Deposit, Withdrawal, and Peer-to-Peer Transfer operations
 │   ├── schema.sql          # Database schema tables and seed data
 │   ├── requirements.txt    # Python library dependencies
+│   ├── .env                # Configured credentials file
 │   ├── .env.example        # Database configuration environment template
 │   └── README.md           # Local application instructions
 ├── .gitignore              # Files to ignore (e.g. credentials, cache)
@@ -45,7 +56,7 @@ Open the `atm_app/.env` file and input your local MySQL root password:
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_USER=root
-DB_PASSWORD=your_mysql_root_password
+DB_PASSWORD=your_password
 DB_NAME=atm_db
 ```
 
@@ -62,18 +73,6 @@ cd atm_app
 streamlit run app.py
 ```
 Open **[http://localhost:8501](http://localhost:8501)** in your web browser.
-
----
-
-## 🔑 Demo Login Credentials
-
-For testing purposes, the database is pre-seeded with the following credentials:
-
-| Role | Account Number | PIN | Balance | Description |
-| :--- | :---: | :---: | :---: | :--- |
-| **Owner (Admin)** | `0000` | `0000` | *N/A* | Admin panel to register/delete customers, view logs, and reset customer PINs. |
-| **Customer 1** | `1001` | `1234` | `$5,000.00` | Standard customer (Check balance, deposit, withdraw, transfer). |
-| **Customer 2** | `1002` | `5678` | `$3,000.00` | Standard customer (Check balance, deposit, withdraw, transfer). |
 
 ---
 

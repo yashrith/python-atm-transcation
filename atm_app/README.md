@@ -6,7 +6,7 @@ A fully functional, dark-themed ATM machine simulation web application built usi
 
 ## 🔑 Login Credentials for Quick Testing
 
-| Role | Name | Account Number | PIN | Initial Balance | Description |
+| Role | Name | Account Number | Password / PIN | Initial Balance | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Owner (Admin)** | Admin Owner | `0000` | `0000` | N/A | Admin panel to manage customers and reset PINs. |
 | **Customer 1** | Alice Johnson | `1001` | `1234` | `$5,000.00` | Standard checking/savings ATM customer. |
@@ -62,7 +62,7 @@ A fully functional, dark-themed ATM machine simulation web application built usi
    DB_HOST=localhost
    DB_PORT=3306
    DB_USER=root
-   DB_PASSWORD=your_mysql_root_password
+   DB_PASSWORD=your_password
    DB_NAME=atm_db
    ```
 
