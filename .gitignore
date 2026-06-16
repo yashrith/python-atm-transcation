@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment variables (Sensitive Credentials)
+atm_app/.env
+.env
+
+# Streamlit configurations
+.streamlit/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+pythonenv*/
+pip-log.txt
+pip-delete-this-directory.txt
