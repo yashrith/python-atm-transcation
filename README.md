@@ -36,17 +36,37 @@ python-atm-transcation/
 
 ## 🛠️ Setup & Running Instructions
 
-Follow these steps to set up and run the application locally from your cloned repository:
+You can set up and run the application in two ways: using Docker Compose (Recommended) or manual installation.
 
-### 1. Database Setup
-Ensure that your MySQL server is running locally on port `3306`.
+### Option 1: Quick Start via Docker (Recommended)
+This method spins up both the MySQL database and the Streamlit app automatically, runs the schema creation, and seeds the database with zero configuration.
+
+1. Ensure **Docker Desktop** is installed and running on your system.
+2. Build and start the services from the project root:
+   ```bash
+   docker compose up --build
+   ```
+3. Once the logs show both services are healthy and running, open **[http://localhost:8501](http://localhost:8501)** in your web browser.
+4. To shut down the containers and clean up resources:
+   ```bash
+   docker compose down
+   ```
+
+---
+
+### Option 2: Manual Setup (Local Python & MySQL)
+
+If you prefer to run the components directly on your host machine:
+
+#### 1. Database Setup
+Ensure that your local MySQL server is running locally on port `3306`.
 Import the `schema.sql` file to create the `atm_db` database and seed it with demo records:
 ```bash
 mysql -u root -p < atm_app/schema.sql
 ```
 *(Enter your MySQL root password when prompted)*
 
-### 2. Configure Environment variables
+#### 2. Configure Environment variables
 Copy the `.env.example` file to `.env` inside the `atm_app/` folder:
 ```bash
 cp atm_app/.env.example atm_app/.env
@@ -60,13 +80,13 @@ DB_PASSWORD=your_password
 DB_NAME=atm_db
 ```
 
-### 3. Install Python Dependencies
+#### 3. Install Python Dependencies
 Install the required packages in your python environment:
 ```bash
 pip install -r atm_app/requirements.txt
 ```
 
-### 4. Launch the Web Application
+#### 4. Launch the Web Application
 Start the Streamlit server from the `atm_app/` directory:
 ```bash
 cd atm_app
